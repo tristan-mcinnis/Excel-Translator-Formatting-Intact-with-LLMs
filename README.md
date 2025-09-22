@@ -1,12 +1,28 @@
-# Excel Translator 📊
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/8b2c5a4a-0d4d-4c8a-8a5a-2b3c4d5e6f7g" alt="Excel Translator" width="300"/>
+
+# Excel Translator
+
+Convert your Excel spreadsheets to beautifully translated content while preserving formatting
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![UV Package Manager](https://img.shields.io/badge/UV-Package%20Manager-purple)](https://github.com/astral-sh/uv)
+[![Tests Passing](https://img.shields.io/badge/Tests-Passing-green)](https://github.com/tristan-mcinnis/Excel-Translator-Formatting-Intact-with-LLMs)
+[![code style black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-A powerful Excel translation tool that preserves all formatting while translating content using various Large Language Model (LLM) providers. Translate Excel spreadsheets from Chinese to English (or other language pairs) while maintaining exact cell positioning, formulas, styling, and formatting.
+*Clean, fast, and reliable Excel translation with multi-provider support and formatting preservation*
+
+✨ [Features](#features) • 🚀 [Quick Start](#quick-start) • 📖 [Usage](#usage) • ✅ [Testing](#testing) • 🤝 [Contributing](#contributing)
+
+</div>
+
+---
 
 ## ✨ Features
+
+A powerful Excel translation tool that preserves all formatting while translating content using various Large Language Model (LLM) providers. Translate Excel spreadsheets from Chinese to English (or other language pairs) while maintaining exact cell positioning, formulas, styling, and formatting.
 
 - **🎯 Formatting Preservation**: Maintains all Excel formatting, fonts, colors, borders, and cell styles
 - **⚡ Fast Translation**: Sub-2 second translation speeds with intelligent caching
@@ -71,24 +87,17 @@ pip install -e .
 python main.py input.xlsx --output output.xlsx
 
 # With specific model and languages
-python main.py input.xlsx --output output.xlsx \\
-  --provider openai --model gpt-5 \\
+python main.py input.xlsx --output output.xlsx \
+  --provider openai --model gpt-5 \
   --source-lang zh --target-lang en
 
 # Batch processing with custom settings
-python main.py input.xlsx --output output.xlsx \\
-  --batch-size 10 --context "financial report" \\
+python main.py input.xlsx --output output.xlsx \
+  --batch-size 10 --context "financial report" \
   --max-retries 3 --save-interval 50
 ```
 
-## 📋 Requirements
-
-- **Python**: 3.10 or higher
-- **Operating System**: macOS, Linux, or Windows
-- **API Keys**: OpenAI API key for translation services
-- **Memory**: Minimum 4GB RAM (8GB+ recommended for large files)
-
-## 🔧 Configuration Options
+## 📖 Usage
 
 ### Command Line Arguments
 
@@ -122,37 +131,76 @@ python main.py input.xlsx --output output.xlsx \\
 | `LOG_LEVEL` | Logging level | `INFO` |
 | `CACHE_DIR` | Cache directory | `translation_cache` |
 
-## 📖 Usage Examples
+### Usage Examples
 
-### Basic Translation
+#### Basic Translation
 ```bash
 # Translate Chinese Excel file to English
 python main.py chinese_report.xlsx --output english_report.xlsx
 ```
 
-### Advanced Usage
+#### Advanced Usage
 ```bash
 # Financial report with custom context
-python main.py financial_data.xlsx --output translated_financial.xlsx \\
-  --context "financial report with accounting terms" \\
+python main.py financial_data.xlsx --output translated_financial.xlsx \
+  --context "financial report with accounting terms" \
   --batch-size 8 --save-interval 30
 
 # Large file with performance optimization
-python main.py large_dataset.xlsx --output translated_dataset.xlsx \\
-  --batch-size 15 --max-retries 3 \\
+python main.py large_dataset.xlsx --output translated_dataset.xlsx \
+  --batch-size 15 --max-retries 3 \
   --log-level DEBUG
 ```
 
-### Using Different Models
+#### Using Different Models
 ```bash
 # Use GPT-5 for higher quality translation
-python main.py input.xlsx --output output.xlsx \\
+python main.py input.xlsx --output output.xlsx \
   --model gpt-5 --context "technical documentation"
 
 # Use GPT-4o for faster translation
-python main.py input.xlsx --output output.xlsx \\
+python main.py input.xlsx --output output.xlsx \
   --model gpt-4o --batch-size 10
 ```
+
+## ✅ Testing
+
+```bash
+# Run all tests
+pytest
+
+# Run with coverage
+pytest --cov=excel_translator --cov-report=html
+
+# Run specific test file
+pytest tests/test_translation.py
+
+# Run with verbose output
+pytest -v
+```
+
+## 🤝 Contributing
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
+
+### Development Guidelines
+
+- Follow PEP 8 style guidelines
+- Add type hints to all functions
+- Write tests for new features
+- Update documentation for API changes
+- Use meaningful commit messages
+
+## 📋 Requirements
+
+- **Python**: 3.10 or higher
+- **Operating System**: macOS, Linux, or Windows
+- **API Keys**: OpenAI API key for translation services
+- **Memory**: Minimum 4GB RAM (8GB+ recommended for large files)
 
 ## 🏗️ Project Structure
 
@@ -173,22 +221,6 @@ excel_translator/
 ├── example.env               # Environment template
 ├── README.md                 # This file
 └── CLAUDE.md                 # Development guidelines
-```
-
-## 🧪 Testing
-
-```bash
-# Run all tests
-pytest
-
-# Run with coverage
-pytest --cov=excel_translator --cov-report=html
-
-# Run specific test file
-pytest tests/test_translation.py
-
-# Run with verbose output
-pytest -v
 ```
 
 ## 🔍 Supported File Types
@@ -231,34 +263,6 @@ flake8 excel_translator/
 # Type checking
 mypy excel_translator/
 ```
-
-### Running Tests
-```bash
-# Run all tests
-pytest
-
-# Run with coverage
-pytest --cov=excel_translator
-
-# Run specific tests
-pytest tests/test_providers.py -v
-```
-
-## 🤝 Contributing
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
-
-### Development Guidelines
-
-- Follow PEP 8 style guidelines
-- Add type hints to all functions
-- Write tests for new features
-- Update documentation for API changes
-- Use meaningful commit messages
 
 ## 📝 License
 
