@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/excel-translator-logo.svg" alt="Excel Translator" width="300"/>
+<img src="excel logo.png" alt="Excel Translator" width="300"/>
 
 # Excel Translator
 
