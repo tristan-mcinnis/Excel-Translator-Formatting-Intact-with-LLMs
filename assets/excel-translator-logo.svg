@@ -1,0 +1,54 @@
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="150" cy="150" r="150" fill="#f8f9fa"/>
+
+  <!-- Circular arrows -->
+  <g stroke="#2c3e50" stroke-width="8" fill="none">
+    <!-- Top arrow -->
+    <path d="M 75 75 Q 150 30 225 75" marker-end="url(#arrowhead)"/>
+    <!-- Right arrow -->
+    <path d="M 225 75 Q 270 150 225 225" marker-end="url(#arrowhead)"/>
+    <!-- Bottom arrow -->
+    <path d="M 225 225 Q 150 270 75 225" marker-end="url(#arrowhead)"/>
+    <!-- Left arrow -->
+    <path d="M 75 225 Q 30 150 75 75" marker-end="url(#arrowhead)"/>
+  </g>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50"/>
+    </marker>
+  </defs>
+
+  <!-- Image icon (top left) -->
+  <g transform="translate(50, 50)">
+    <rect x="0" y="0" width="30" height="24" rx="3" fill="none" stroke="#2c3e50" stroke-width="2"/>
+    <circle cx="8" cy="8" r="3" fill="#2c3e50"/>
+    <polygon points="5,18 15,12 25,18 25,22 5,22" fill="#2c3e50"/>
+  </g>
+
+  <!-- Excel icon (center) -->
+  <g transform="translate(120, 120)">
+    <!-- Excel background -->
+    <rect x="0" y="0" width="60" height="60" rx="8" fill="#217346"/>
+    <rect x="8" y="8" width="44" height="44" rx="4" fill="#33a852"/>
+    <rect x="16" y="16" width="28" height="28" rx="2" fill="#4caf50"/>
+
+    <!-- X letter -->
+    <text x="30" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">X</text>
+  </g>
+
+  <!-- Translation icon (bottom right) -->
+  <g transform="translate(220, 220)">
+    <rect x="0" y="0" width="30" height="20" rx="3" fill="none" stroke="#2c3e50" stroke-width="2"/>
+    <text x="4" y="8" font-family="Arial, sans-serif" font-size="6" fill="#2c3e50">T</text>
+    <text x="12" y="8" font-family="Arial, sans-serif" font-size="4" fill="#2c3e50">/</text>
+    <text x="16" y="8" font-family="Arial, sans-serif" font-size="6" fill="#2c3e50">文</text>
+    <line x1="4" y1="12" x2="26" y2="12" stroke="#2c3e50" stroke-width="1"/>
+    <line x1="4" y1="16" x2="20" y2="16" stroke="#2c3e50" stroke-width="1"/>
+  </g>
+
+  <!-- Drop shadow -->
+  <ellipse cx="150" cy="280" rx="80" ry="15" fill="#000000" opacity="0.1"/>
+</svg>

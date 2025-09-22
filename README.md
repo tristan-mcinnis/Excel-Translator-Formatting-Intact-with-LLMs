@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://github.com/user-attachments/assets/8b2c5a4a-0d4d-4c8a-8a5a-2b3c4d5e6f7g" alt="Excel Translator" width="300"/>
+<img src="assets/excel-translator-logo.svg" alt="Excel Translator" width="300"/>
 
 # Excel Translator
 
