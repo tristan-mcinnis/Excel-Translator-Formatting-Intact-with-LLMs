@@ -1,0 +1,17 @@
+openai==1.12.0
+pandas==2.2.1
+numpy==1.26.4
+matplotlib==3.8.3
+seaborn==0.13.2
+jupyter==1.0.0
+pytest==8.0.2
+python-dotenv==1.0.1
+openpyxl==3.1.2
+tqdm==4.66.1
+networkx==3.2.1
+scikit-learn==1.4.0
+huggingface-hub==0.16.4
+sentence-transformers==2.2.2
+chonkie==0.1.0
+torch==2.1.2
+XlsxWriter==3.2.0
